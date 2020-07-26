@@ -16,10 +16,9 @@ end
 
 def consolidate_cart(cart)
 new_cart = []
-  cart_with_count = cart.each do |items|
-    items[:count] = 1 
-  end
-  binding.pry
+  i = 0 
+  while i < cart.length 
+  new_cart_item = find_item_by_name_in_collection(cafrt
 
 end
   
