@@ -30,8 +30,8 @@ else
     count: 1 
   }
   new_cart << new_cart_item
-  }
-  
-
+end
+i += 1 
+end 
 end
   
