@@ -16,7 +16,6 @@ new_cart = []
   new_cart_item = find_item_by_name_in_collection(cart[i][:item], new_cart)
   if new_cart_item
     new_cart_item[:count] += 1 
-  end
   else 
     new_cart_item = {
       :item => cart[i][:item],
