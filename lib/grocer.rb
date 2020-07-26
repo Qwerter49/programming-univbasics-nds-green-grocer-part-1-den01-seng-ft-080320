@@ -8,11 +8,6 @@ def find_item_by_name_in_collection(name, collection)
   nil
 end
 
-def find_all_items_by_name(name, collection)
-  collection.find_all  { |items| items[:items] = name }
-end
-#.find_all enumerator
-
 
 def consolidate_cart(cart)
 new_cart = []
@@ -22,16 +17,16 @@ new_cart = []
   if new_cart_item
     new_cart_item[:count] += 1 
   end
-else 
-  new_cart_item = {
-    item: cart[i][:item]
-    price: cart[i][:price]
-    clearance: car[i][:clearance]
-    count: 1 
-  }
-  new_cart << new_cart_item
-end
-i += 1 
+  else 
+    new_cart_item = {
+      item: cart[i][:item]
+      price: cart[i][:price]
+      clearance: car[i][:clearance]
+      count: 1 
+    }
+    new_cart << new_cart_item
+  end
+  i += 1 
 end 
 new_cart
 end
